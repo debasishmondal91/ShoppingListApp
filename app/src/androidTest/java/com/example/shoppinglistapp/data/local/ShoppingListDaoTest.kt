@@ -73,7 +73,6 @@ class ShoppingListDaoTest {
         shoppingListDao.addShoppingItems(shoppingItems3)
 
         val totalPriceSum = shoppingListDao.observeTotalPrice().getOrAwaitValue()
-
         println("$totalPriceSum")
 
         assertThat(totalPriceSum).isEqualTo(10 * 5.5f + 5 * 10.0f + 6 * 8.0f)
